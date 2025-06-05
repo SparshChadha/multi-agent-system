@@ -46,7 +46,7 @@ The visual representation of this architecture is:
 ## Installation
 1.  **Clone the repository (if applicable)**:
     ```bash
-    # git clone <repository-url>
+    # git clone https://github.com/SparshChadha/multi-agent-system.git
     # cd <repository-directory>
     ```
 
