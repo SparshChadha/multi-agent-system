@@ -1,0 +1,123 @@
+Hi Sparsh Chadha,
+
+As a followup to the last email you can submit the assessment to iAmNotTellingYouThat@gmail.com
+
+ 
+
+“Multi-Format Autonomous AI System with Contextual Decisioning & Chained Actions”
+🎯New Objective
+Build a multi-agent system that processes inputs from Email, JSON, and PDF, classifies both format + business intent, routes to specialized agents, and dynamically chains a follow-up action based on extracted data (e.g., triggering an alert, generating a summary, flagging a risk).
+
+🧩You Must Build
+1. Classifier Agent (Level-Up)
+Detects format and business intent
+
+Maps to:
+
+Format: JSON, Email, PDF
+
+Intent: RFQ, Complaint, Invoice, Regulation, Fraud Risk
+
+Uses few-shot examples + schema matching
+
+Passes routing + intent metadata to memory
+
+2. Email Agent
+Extracts structured fields: sender, urgency, issue/request
+
+Identifies tone (e.g., escalation, polite, threatening)
+
+Triggers action based on tone + urgency
+
+Escalate → notify CRM (simulate with API)
+
+Routine → log and close
+
+3. JSON Agent
+Parses webhook data (simulate with provided sample)
+
+Validates required schema fields
+
+Flags anomalies (e.g., field mismatch, type errors)
+
+If anomalies detected → log alert in memory/API
+
+4. PDF Agent
+Extracts fields (using PDF parsers, not hardcoded text)
+
+Parses line-item invoice data or policy document
+
+Flags if:
+
+Invoice total > 10,000
+
+Policy mentions "GDPR", "FDA", etc.
+
+5. Shared Memory Store
+All agents must read/write to shared memory
+
+Store:
+
+Input metadata (source, timestamp, classification)
+
+Extracted fields per agent
+
+Chained actions triggered
+
+Agent decision traces
+
+6. Action Router (New Component)
+Based on agent outputs, trigger follow-up action:
+
+e.g., Create ticket, escalate issue, flag compliance risk
+
+Simulate via REST call (e.g., POST /crm, POST /risk_alert)
+
+🔁End-to-End Flow Example
+User uploads email → Classifier detects: Email + Complaint
+
+Email agent processes → Tone = angry, Urgency = high
+
+Action Router calls: POST /crm/escalate
+
+Memory logs entire trace for audit
+
+🧰Tech Stack Suggestions
+Python + FastAPI
+
+LangChain / LLM for routing and field extraction
+
+Redis / SQLite for memory
+
+Tika / PyPDF2 for PDF
+
+Faker for sample JSON/webhook data
+
+🧪Bonus Challenges
+Add retry logic for failed agent actions
+
+Implement a simple UI to upload input and see routing
+
+Dockerize entire flow (MCP + agents)
+
+📤Submission Requirements
+Working video demo (mandatory) with explaination 
+
+GitHub repo with:
+
+README.md explaining architecture + agent logic
+
+Sample inputs (email, PDF, JSON)
+
+Output logs
+
+Screenshots or post-action outputs
+
+Diagram of agent flow and chaining
+
+
+
+All the Best!
+
+Regards,
+Flowbit Private Limited Team
