@@ -1,0 +1,16 @@
+// Multi-Format Autonomous AI System
+digraph {
+	Classifier [label=Classifier]
+	Router [label=Router]
+	EmailAgent [label=EmailAgent]
+	JSONAgent [label=JSONAgent]
+	PDFAgent [label=PDFAgent]
+	ActionRouter [label=ActionRouter]
+	Classifier -> Router
+	Router -> EmailAgent [label="agent = Email"]
+	Router -> JSONAgent [label="agent = JSON"]
+	Router -> PDFAgent [label="agent = PDF"]
+	EmailAgent -> ActionRouter
+	JSONAgent -> ActionRouter
+	PDFAgent -> ActionRouter
+}
