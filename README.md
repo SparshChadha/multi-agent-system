@@ -1,5 +1,3 @@
-# multi-agent-system
-
 # Multi-Format Autonomous AI System
 
 ## Table of Contents
