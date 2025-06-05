@@ -48,8 +48,8 @@ UNKNOWN|UNKNOWN
    - If you are using any provided tools (e.g. get_weather, get_current_time), you MAY call them, but only if it helps you verify “format” is JSON vs. Email vs. PDF. Otherwise, rely on content clues.
 
 2. Once you know the format, identify business intent from the main body text:
-   - RFQ (Request for Quotation) if it talks about “pricing,” “quote,” “we’d like to purchase,” “requesting a quote for X units.”
-   - Complaint if it describes an issue (“broken,” “missing,” “damaged,” “unacceptable service,” “I want a refund,” “I’m upset”, "ASAP", "immediately", "unacceptable").
+   - RFQ (Request for Quotation) if it talks about “pricing,” “quote,” “we'd like to purchase,” “requesting a quote for X units.”
+   - Complaint if it describes an issue (“broken,” “missing,” “damaged,” “unacceptable service,” “I want a refund,” “I'm upset”, "ASAP", "immediately", "unacceptable").
    - Invoice if it is an invoice document (table of line items, “Invoice Number,” “Amount Due,” “Bill To,” “Due Date”, "Subtotal", "Total Due").
    - Regulation if it is a legal/policy document (mentions “GDPR,” “FDA,” “HIPAA,” “compliance,” “section,” “clause,” “regulation”, "policy").
    - Fraud Risk if it explicitly calls out “fraud,” “suspicious transaction,” “unauthorized,” “chargeback risk,” “identity theft,” or “phishing alert”, "security alert".
